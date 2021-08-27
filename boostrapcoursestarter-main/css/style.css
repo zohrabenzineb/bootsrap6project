@@ -1,0 +1,120 @@
+/* linkit template FROM ULTRASDZCODER */
+:root{
+    --soft-color:#3f3d56;
+    --animation-set: 3s ease-out;
+}
+.nav-link:hover{
+    color:#0d6efd !important
+}
+.btn-soft{
+    background-color:#E6E6E6 ;
+    color: var(--soft-color) !important;
+    }
+section{
+    margin: 1em auto;
+}
+ 
+#features .card{
+    height: 250px;
+    overflow: hidden ;
+   }
+.lists{
+    list-style-type: none;
+    font-size: 1.2rem;
+    color: var(--bs-succes);
+    display: grid;
+   grid-template-columns: repeat(2, 1fr);
+}
+.lists li::before{
+    content: "✔️";
+}
+.img-control{
+    transform: rotateX(355deg) rotateY(74deg) rotateZ(3deg) rotateY(326deg) translate3d(0, 0, 20px) !important;
+}
+#shape{
+    background-color:#E6E6E6 ;
+    padding: 3rem;
+    position: relative;
+}
+#shape::before{
+    position: absolute;
+    width: 100%;
+    right: 0;
+    height: 187px;
+    top: -30%;
+    z-index: -9999;
+    content: "";  
+    clip-path: polygon(100% 10%, 100% 100%, 0 100%, 0% 23%);
+    background-color: #E6E6E6;
+}
+.social li a.fab{
+    color: gray;
+    text-decoration: none;
+}
+.to-left{
+    animation: toleftAnimation var(--animation-set);
+}
+.to-right{
+    animation: torightAnimation var(--animation-set);
+}
+.toup{
+    animation: toupAnimation var(--animation-set);
+}
+.to-down{
+    animation: todownAnimation var(--animation-set);
+}
+.up-animation:hover{
+    transform: translateY(-5px);
+    transition: transform .5s ease;
+}
+@keyframes  toleftAnimation{
+    from{
+        opacity: .25;
+        transform: translateX(-100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes  torightAnimation{
+    from{
+        opacity: .25;
+        transform: translateX(100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes toupAnimation{
+    from{
+        opacity: .25;
+        transform: translateY(-100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes todownAnimation{
+    from{
+        opacity: .25;
+        transform: translateY(100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width:780px){
+#shape::before{
+    top: -20%;
+}
+    
+}
+
+
+
+
